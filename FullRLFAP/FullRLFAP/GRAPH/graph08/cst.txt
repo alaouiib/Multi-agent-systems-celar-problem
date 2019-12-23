@@ -1,0 +1,2 @@
+The total number of constraints in the ctr-file is : 3757
+The objective is minimising the number of frequencies. 

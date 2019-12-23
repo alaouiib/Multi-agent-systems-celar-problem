@@ -1,0 +1,15 @@
+Objective :
+If there is a solution find that one which minimizes the largest assigned value
+ 
+
+If there is no solution minimizes the cost function whith the following
+coefficients:
+
+             a1 = 1000
+             a2 =  100
+             a3 =   10
+             a4 =    1
+             b1 =    0
+             b2 =    0
+             b3 =    0
+             b4 =    0

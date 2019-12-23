@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solution valuation="0">
+  <assignment variable="W" value="2" />
+  <assignment variable="X" value="2" />
+  <assignment variable="Y" value="3" />
+  <assignment variable="Z" value="1" />
+</solution>

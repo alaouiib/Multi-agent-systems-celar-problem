@@ -1,0 +1,39 @@
+<instance>  
+  <presentation name="sampleProblem" maxConstraintArity="3"  
+                maximize="false" format="XCSP 2.1_FRODO" />  
+
+  <agents nbAgents="3">  
+    <agent name="agentX" />  
+    <agent name="agentY" />  
+    <agent name="agentZ" />  
+    <agent name="agentW" />  
+
+  </agents>  
+ 
+  <domains nbDomains="2">  
+    <domain name="three_colors" nbValues="3">1..3</domain>  
+    <domain name="two_colors" nbValues="2">1..2</domain>  
+  </domains>  
+ 
+  <variables nbVariables="3">  
+    <variable name="X" domain="two_colors" agent="agentX" />  
+    <variable name="Y" domain="three_colors" agent="agentY" />  
+    <variable name="Z" domain="two_colors" agent="agentZ" />  
+    <variable name="W" domain="three_colors" agent="agentW" />  
+
+  </variables>  
+ 
+  <relations nbRelations="1">  
+    <relation name="NEQ" arity="2" nbTuples="3" semantics="soft" defaultCost="0">  
+      1: 1 1|2 2|3 3  
+    </relation>  
+  </relations>  
+ 
+  <constraints nbConstraints="3">  
+    <constraint name="X_and_Y_have_different_colors" arity="2" scope="X Y" reference="NEQ" />  
+    <constraint name="X_and_Z_have_different_colors" arity="2" scope="X Z" reference="NEQ" />  
+    <constraint name="Y_and_Z_have_different_colors" arity="2" scope="Y Z" reference="NEQ" />  
+        <constraint name="Y_and_W_have_different_colors" arity="2" scope="Y W" reference="NEQ" />  
+
+  </constraints>  
+</instance>  

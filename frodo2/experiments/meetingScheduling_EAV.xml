@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="src/frodo2/algorithms/XCSPschemaJaCoP.xsd">
+  <presentation name="randomMeetingScheduling_1576938175207" format="XCSP 2.1_FRODO" maximize="false">
+    <stats name="formulation">EAV</stats>
+    <stats name="number of agents">3</stats>
+    <stats name="number of meetings">2</stats>
+    <stats name="number of agents per meeting">2</stats>
+    <stats name="number of time slots">8</stats>
+    <stats name="constraint violation cost">infinity</stats>
+    <stats name="target probability of being unavailable at any given time slot">0.0</stats>
+    <stats name="average probability of being unavailable at any given time slot">0.0</stats>
+    <stats name="maximum random cost of being unavailable at any given time slot">null</stats>
+  </presentation>
+  <agents nbAgents="3">
+    <agent name="a0" />
+    <agent name="a1" />
+    <agent name="a2" />
+  </agents>
+  <domains nbDomains="1">
+    <domain name="slots" nbValues="8">1..8</domain>
+  </domains>
+  <variables nbVariables="2">
+    <variable name="m0" domain="slots" agent="a2" />
+    <variable name="m1" domain="slots" agent="a1" />
+  </variables>
+  <relations nbRelations="1">
+    <relation name="trivial1" semantics="soft" arity="1" nbTuples="1" defaultCost="0">0:1</relation>
+  </relations>
+  <constraints nbConstraints="3">
+    <constraint name="a0_availability" agent="a0" arity="2" scope="m0 m1 " reference="global:allDifferent">
+      <parameters>[ m0 m1 ]</parameters>
+    </constraint>
+    <constraint name="a1_availability" agent="a1" arity="1" scope="m1 " reference="global:allDifferent">
+      <parameters>[ m1 ]</parameters>
+    </constraint>
+    <constraint name="a2_availability" agent="a2" arity="1" scope="m0 " reference="global:allDifferent">
+      <parameters>[ m0 ]</parameters>
+    </constraint>
+  </constraints>
+</instance>

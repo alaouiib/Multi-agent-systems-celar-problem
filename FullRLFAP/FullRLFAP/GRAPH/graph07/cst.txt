@@ -1,0 +1,11 @@
+The total number of constraints in the ctr-file is : 2170
+The objective is minimising the violation of the constraints. 
+
+             a1 = 1000
+             a2 =  100
+             a3 =   10
+             a4 =    1
+             b1 = 1000
+             b2 =  100
+             b3 =   10
+             b4 =    1

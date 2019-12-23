@@ -1,0 +1,5 @@
+ Objective :
+     
+ To find a solution minimizing the number of different values used for
+the assignment of the variables.
+

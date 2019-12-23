@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="src/frodo2/algorithms/XCSPschemaJaCoP.xsd">
+  <presentation name="partyProblem_1576604866887" format="XCSP 2.1_FRODO" maxConstraintArity="4">
+    <stats name="margin of error">0.0</stats>
+    <stats name="equilibrium type">pure Nash</stats>
+    <stats name="number of players">5</stats>
+    <stats name="party graph average density">0.4</stats>
+    <stats name="number of disconnected components of the party graph">1</stats>
+    <stats name="party graph max degree">3</stats>
+  </presentation>
+  <agents nbAgents="5">
+    <agent name="a_x0" />
+    <agent name="a_x1" />
+    <agent name="a_x2" />
+    <agent name="a_x3" />
+    <agent name="a_x4" />
+  </agents>
+  <domains nbDomains="1">
+    <domain name="Strategies" nbValues="2">0 1</domain>
+  </domains>
+  <variables nbVariables="5">
+    <variable name="px0" domain="Strategies" agent="a_x0" />
+    <variable name="px1" domain="Strategies" agent="a_x1" />
+    <variable name="px2" domain="Strategies" agent="a_x2" />
+    <variable name="px3" domain="Strategies" agent="a_x3" />
+    <variable name="px4" domain="Strategies" agent="a_x4" />
+  </variables>
+  <relations nbRelations="5">
+    <relation name="px0_rel" arity="3" semantics="conflicts" nbTuples="4">0 0 0|
+0 1 0|
+1 0 0|
+1 1 0</relation>
+    <relation name="px1_rel" arity="4" semantics="conflicts" nbTuples="8">0 0 0 1|
+0 0 1 0|
+0 1 0 0|
+0 1 1 0|
+1 0 0 1|
+1 0 1 1|
+1 1 0 1|
+1 1 1 0</relation>
+    <relation name="px2_rel" arity="2" semantics="conflicts" nbTuples="2">0 1|
+1 0</relation>
+    <relation name="px3_rel" arity="2" semantics="conflicts" nbTuples="2">0 0|
+1 1</relation>
+    <relation name="px4_rel" arity="2" semantics="conflicts" nbTuples="2">0 1|
+1 1</relation>
+  </relations>
+  <constraints nbConstraints="5">
+    <constraint name="px0_const" agent="a_x0" arity="3" scope="px1 px2 px0" reference="px0_rel" />
+    <constraint name="px1_const" agent="a_x1" arity="4" scope="px0 px3 px4 px1" reference="px1_rel" />
+    <constraint name="px2_const" agent="a_x2" arity="2" scope="px0 px2" reference="px2_rel" />
+    <constraint name="px3_const" agent="a_x3" arity="2" scope="px1 px3" reference="px3_rel" />
+    <constraint name="px4_const" agent="a_x4" arity="2" scope="px1 px4" reference="px4_rel" />
+  </constraints>
+</instance>

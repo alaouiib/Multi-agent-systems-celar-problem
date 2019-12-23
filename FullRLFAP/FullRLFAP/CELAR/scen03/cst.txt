@@ -1,0 +1,3 @@
+Objective :
+    To find a solution which minimizes the number of different assigned values.
+

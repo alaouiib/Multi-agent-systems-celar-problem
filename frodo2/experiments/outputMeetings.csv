@@ -1,0 +1,5 @@
+algorithm;timed out;problem instance;filename;average probability of being unavailable at any given time slot;constraint violation cost;formulation;maximum random cost of being unavailable at any given time slot;number of agents;number of agents per meeting;number of meetings;number of time slots;target probability of being unavailable at any given time slot;NCCCs;simulated time (in ms);number of messages;total message size (in bytes);maximum message size (in bytes);induced treewidth;reported cost;true cost
+DPOP;0;randomMeetingScheduling_1576938168183;meetingScheduling_PEAV.xml;0.0;infinity;PEAV;null;3;2;1;8;0.0;0;206;8;2002;465;1;0;0
+P-DPOP;0;randomMeetingScheduling_1576938168183;meetingScheduling_PEAV.xml;0.0;infinity;PEAV;null;3;2;1;8;0.0;0;615;905;16217;812;1;0;0
+P2-DPOP;0;randomMeetingScheduling_1576938168183;meetingScheduling_PEAV.xml;0.0;infinity;PEAV;null;3;2;1;8;0.0;0;851;1063;195581;12529;1;0;0
+MPC-DisCSP4;0;randomMeetingScheduling_1576938168183;meetingScheduling_EAV.xml;0.0;infinity;EAV;null;3;2;1;8;0.0;0;223;96;12019;1541;-1;null;0

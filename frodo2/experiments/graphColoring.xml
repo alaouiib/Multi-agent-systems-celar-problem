@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="src/frodo2/algorithms/XCSPschemaJaCoP.xsd">
+  <presentation name="graphColoring_1576359744387" maxConstraintArity="2" maximize="false" format="XCSP 2.1_FRODO">
+    <stats name="number of nodes">5</stats>
+    <stats name="target density">0.4</stats>
+    <stats name="true average density">0.4</stats>
+    <stats name="target unary tightness">0.0</stats>
+    <stats name="true average unary tightness">0.0</stats>
+    <stats name="number of colors">3</stats>
+    <stats name="number of uncontrollable nodes">0</stats>
+    <stats name="number of disconnected components">1</stats>
+    <stats name="max degree">2</stats>
+  </presentation>
+  <agents nbAgents="5">
+    <agent name="a_x0" />
+    <agent name="a_x1" />
+    <agent name="a_x2" />
+    <agent name="a_x3" />
+    <agent name="a_x4" />
+  </agents>
+  <domains nbDomains="1">
+    <domain name="colors" nbValues="3">1..3</domain>
+  </domains>
+  <variables nbVariables="5">
+    <variable name="x0" domain="colors" agent="a_x0" />
+    <variable name="x1" domain="colors" agent="a_x1" />
+    <variable name="x2" domain="colors" agent="a_x2" />
+    <variable name="x3" domain="colors" agent="a_x3" />
+    <variable name="x4" domain="colors" agent="a_x4" />
+  </variables>
+  <predicates nbPredicates="1">
+    <predicate name="neq">
+      <parameters>int X int Y</parameters>
+      <expression>
+        <functional>ne(X, Y)</functional>
+      </expression>
+    </predicate>
+  </predicates>
+  <constraints nbConstraints="4">
+    <constraint name="x3_neq_x4" scope="x3 x4" arity="2" reference="neq">
+      <parameters>x3 x4</parameters>
+    </constraint>
+    <constraint name="x1_neq_x3" scope="x1 x3" arity="2" reference="neq">
+      <parameters>x1 x3</parameters>
+    </constraint>
+    <constraint name="x0_neq_x1" scope="x0 x1" arity="2" reference="neq">
+      <parameters>x0 x1</parameters>
+    </constraint>
+    <constraint name="x0_neq_x2" scope="x0 x2" arity="2" reference="neq">
+      <parameters>x0 x2</parameters>
+    </constraint>
+  </constraints>
+</instance>

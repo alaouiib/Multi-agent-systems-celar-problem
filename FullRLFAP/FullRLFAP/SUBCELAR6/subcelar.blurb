@@ -1,0 +1,9 @@
+The  SUBCELAR6 directory contains 4  instances that have been extracted from
+the challenging scen06 problem from the  CELAR data-set. These instances are
+ideal  for benchmarking  Max-CSP  algorithms (algorithms trying  to  solve a
+problem of constraint violation minimisation optimally). All together, these
+instances induce a compulsory violation cost of 3389, which is exactly equal
+to the cost of the best  solution found.  This  is how scen06 optimality was
+proved.  The first resolution  of  these problems needed  around 32  days of
+cpu-time  (using a Lisp implementation  of the Russian Doll Search algorithm
+on Sparc 5).
